@@ -1,0 +1,339 @@
+
+
+.perfil-facebook {
+  width: 100%;
+  position: relative;
+  top: -1rem;
+}
+
+.perfil-facebook{
+margin-left: 1rem;
+margin-right: -4rem;
+}
+
+.cover-photo {
+width: 600px; /* Ancho de la portada */
+height: 200px; /* Alto de la portada */
+position: relative; /* Cambia a relativo para permitir el posicionamiento absoluto */
+margin: 0 auto; /* Centra horizontalmente */
+}
+
+.portada {
+width: 100%;
+height: 100%;
+object-fit: cover; /* Ajusta la imagen de portada */
+}
+
+.porta{
+color: white;
+position: absolute;
+top: 100%; /* Centra verticalmente */
+left: 96.7%; /* Centra horizontalmente */
+}
+
+.perfi{
+color: white;
+position: absolute;
+width: 20px;
+top: 120%; /* Centra verticalmente */
+left: 28%; /* Centra horizontalmente */
+}
+.profile-pic img {
+display: block;
+width: 100%; /* Hacer que la imagen ocupe todo el contenedor */
+height: 100%; /* Hacer que la imagen ocupe todo el contenedor */
+object-fit: cover; /* Ajustar la imagen para que cubra el contenedor sin distorsión */
+}
+
+.foto-perfil {
+width: 150px;
+height: 150px;
+object-fit: cover; /* Ajustar la imagen para que cubra el contenedor sin distorsión */
+border-radius: 50%; /* Hacer el contenedor redondo */
+position: absolute;
+top: 100%; /* Centra verticalmente */
+left: 18%; /* Centra horizontalmente */
+transform: translate(-50%, -50%);
+border: 4px solid hsl(0, 0%, 0%);
+}
+
+.algo {
+display: none;
+  background-color: rgb(12, 12, 12);
+  margin-left: 10rem;
+  width: 20rem;
+  height: 12.8rem;
+  position: absolute;
+  z-index: -200;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.infot {
+  line-height:10px;
+position: absolute;
+margin-top: 1rem;
+margin-left: 13rem;
+}
+
+.infot h2{
+  margin-bottom: 5px;
+}
+
+.datos button{
+  margin-right: 4rem;
+  padding: 8px 9px;
+  border-radius: 16px;
+  background: #ff9900;
+  color: #ffffff;
+  font-size: 15px;
+  margin-top: 2rem;
+  margin-left: -2rem;
+}
+
+.megusta{
+  cursor: pointer;
+}
+
+
+.info-bio input[type="text"] {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+border: none; /* Borde gris claro */
+background-color: transparent;
+color: var(--color-primary);
+font-size: 14px;
+font-family: "Montserrat", sans-serif;
+outline: none; /* Eliminar contorno al enfocar */
+cursor: default;
+}
+
+
+.error-message {
+  color: rgb(255, 255, 255);
+  font-size: 0.8em;
+  margin-top: 0.5em;
+}
+
+
+.biography {
+  display: flex;
+  align-items: center;
+
+}
+
+.biography-container h3 {
+  display: inline; /* Mostrar en línea para que quede en la misma línea que el ícono */
+}
+
+
+.edit-icon {
+  display: inline; /* Mostrar en línea */
+  cursor: pointer; /* Cambiar el cursor a un puntero cuando se pasa por encima */
+  width: 19px;
+  margin-bottom: -0.3rem;
+}
+
+.biography-container div {
+margin-bottom: 5px;
+}
+
+.biography-container h3{
+padding-bottom: 10px;
+}
+.biography-container input{
+margin-left: 5px;
+}
+
+.biography-container label{
+font-size: 14px;
+font-weight: 500; 
+}
+.biography-container input[type="text"] {
+border: none; /* Borde gris claro */
+background-color: transparent;
+color: #ffffff;
+font-size: 14px;
+font-weight: 300;
+font-family: "Montserrat", sans-serif;
+outline: none; /* Eliminar contorno al enfocar */
+cursor: default;
+}
+
+.biography-container input[type="text"]::placeholder {
+color: #ffffff;
+}
+
+.biography-container .edit-icon {
+margin-left: 5px;
+}
+
+/* Estilos para los nuevos iconos */
+.icon {
+color: rgb(240, 151, 34);
+width: 18px;
+margin-right: 1px;
+margin-bottom: -5.5px; 
+}
+/* Estilos para el modal de edición */
+.edit-modal {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.edit-form {
+width: 27rem;
+max-height: 30rem;
+padding: 1rem;
+background-color: rgba(7, 7, 7, 0.5);
+border: 1px solid rgba(36, 36, 36, 0.222);
+backdrop-filter: blur(40px);
+border-radius: 0.7rem;
+transition: all ease 0.3s;
+}
+
+.edit-form h3 {
+margin-bottom: 10px;
+}
+
+.edit-form div {
+margin-bottom: 15px;
+}
+
+.edit-form label {
+color: white;
+display: block;
+font-weight: bold;
+margin-bottom: 5px;
+
+}
+
+.edit-form .icon {
+color: white;
+
+}
+
+.edit-form input[type="text"]::placeholder {
+color: rgb(255, 255, 255);
+}
+.edit-form input[type="text"] {
+color: rgb(255, 255, 255);
+transition: all .6s ease;
+border: 1px solid white;
+}
+
+.edit-form input[type="text"]:focus{
+border: 1px solid var(--color-primary);
+}
+
+.edit-form input {
+width: 100%;
+padding: 8px;
+border: 1px solid var(--color-primary);
+border-radius: 4px;
+box-sizing: border-box;
+font-size: 14px;
+margin-top: 3px;
+}
+
+.botones {
+display: flex; /* Cambiar el contenedor a inline-block */
+}
+
+.update, .cancel {
+flex: 1;
+border-radius: 0.5rem;
+width: calc(50% - 0.25rem); /* Calculamos el ancho de cada botón, restando el espacio entre ellos */
+margin-right: 0.5rem; /* Espacio entre los botones */
+padding: 0.75rem 1.25rem;
+text-align: center;
+font-size: 0.875rem;
+line-height: 1.25rem;
+font-weight: 600;
+margin-top: 0.5rem;
+cursor: pointer;
+}
+
+.update {
+background-color: var(--color-primary);
+color: rgba(255, 255, 255, 1);
+}
+
+.cancel {
+background-color: rgba(249, 250, 251, 1);
+color: rgba(107, 114, 128, 1);
+transition: all .15s ease;
+}
+
+
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  .perfil-facebook {
+    max-width: 370px;
+    top: -4rem;
+  }
+
+
+  .cover-photo {
+    width: 100%; /* Ancho de la portada */
+    height: 180px; /* Alto de la portada */
+    margin: 0 auto; /* Centra horizontalmente */
+  }
+
+  .foto-perfil {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 100%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+  }
+
+  .porta{
+    top: 99%; /* Centra verticalmente */
+    left: 94%; /* Centra horizontalmente */
+    }
+    
+    .perfi{
+    width: 19px;
+    top: 114%; /* Centra verticalmente */
+    left: 30%; /* Centra horizontalmente */
+    }
+
+  .infot {
+    margin-top: 4rem;
+    margin-left: 0.5rem;
+  }
+
+  .datos button {
+    margin: 0.5rem 0.1rem;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .edit-modal {
+    width: 96%;
+  }
+
+  .edit-form {
+    max-width: 94%;
+    padding: 1rem;
+  }
+
+  .botones {
+    flex-direction: column;
+  }
+
+  .update, .cancel {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}

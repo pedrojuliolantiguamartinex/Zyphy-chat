@@ -1,0 +1,69 @@
+.main .container .right{
+    display: flex;
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-left);
+}
+
+.right .calendar-container  {
+    width: 250px;
+    margin-top: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(12, 12, 12); /* Establece el color de fondo */
+    border-radius: 10px; /* Establece los bordes redondeados */
+    position: sticky;
+    top: var(--sticky-top-right);
+    bottom: 0;
+    /* margin-left: -3rem; */
+    padding: 1.5rem; /* Ajusta el relleno según sea necesario */
+
+  }
+
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .header button {
+    background-color: transparent;
+    padding: 1px 5px;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .days {
+    display: flex;
+  }
+  
+  .days div {
+    width: calc(100% / 7);
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+  }
+  
+  .dates {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .dates div {
+    width: calc(100% / 7);
+    text-align: center;
+    padding: 5px 0;
+  }
+  
+  .today {
+    background-color: orange;
+    border-radius: 50%;
+  }
+  
+  @media screen and (max-width: 660px) {
+    .right .calendar-container{
+        display: none;
+    }
+  }

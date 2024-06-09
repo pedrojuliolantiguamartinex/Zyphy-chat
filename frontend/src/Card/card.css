@@ -1,0 +1,154 @@
+/* card.css */
+
+.main {
+    display: flex;
+    justify-content: center;
+  }
+
+  
+  .feeds .feed{
+    background-color: rgb(12, 12, 12);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    margin: 1rem 0;
+    margin-bottom: 0rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+  .feed {
+    max-width: 600px;
+    max-height: 850px;
+    width: 450px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .head {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+   .user {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+
+   .profile-pic img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+   .info h3 {
+    margin: 0.5rem 0.5rem 1rem 0.5rem;
+    font-size: 16px;
+  }
+
+   .photo img {
+    width: 100%;
+    max-height: 300px;
+  }
+ 
+  .action-button {
+    display: flex;
+    gap: 10px; /* Espacio entre elementos */
+    padding: 10px; /* Espacio alrededor de los elementos */
+}
+
+  .action-button button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary);
+  }
+
+  .btn_comment{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary);
+  }
+
+  .action-button button:focus {
+    outline: none;
+  }
+   .liked-by {
+    padding: 10px;
+  }
+   .caption {
+    padding: 10px;
+  }
+
+  .caption p{
+    word-break: break-all;
+  }
+   .comments {
+    padding: 10px;
+  }
+
+   .comments li {
+    line-height: 1.7;
+    margin-bottom: 10px;
+    word-break: break-all;
+  }
+   .comments li strong {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  .cuadro_comments{
+    padding: 10px;
+    max-height: 150px; /* Establece la altura máxima deseada */
+    overflow-y: auto;
+  }
+
+  .cuadro_comments::-webkit-scrollbar {
+    width: 8px; 
+  }
+  
+  .cuadro_comments::-webkit-scrollbar-thumb {
+    background-color: rgba(150, 150, 150, 0.5); 
+    border-radius: 4px; 
+  }
+  
+  .cuadro_comments::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(150, 150, 150, 0.7);
+  }
+  
+  .cuadro_comments::-webkit-scrollbar-track {
+    background-color: rgba(200, 200, 200, 0.1);
+  }
+
+  .Post_comment {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid orange;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    outline: none; /* Eliminar contorno al enfocar */
+    cursor: default;
+    margin-bottom: 20px;
+    width: 90%;
+  }
+
+ 
+  .photo img.photo-image {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    max-height: 425px;
+    object-fit: cover;
+    /* aspect-ratio: 9/16; */
+  }
+
+  .photo img.photo-image:hover {
+    object-fit: contain;
+  }
+
+
+
+  @media screen and (max-width: 660px) {
+  .feeds .feed{
+     margin-left: 1rem;
+
+}
+  }

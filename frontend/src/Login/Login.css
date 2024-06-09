@@ -1,0 +1,160 @@
+.background {
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; 
+    
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./background.png');
+    background-size: cover;
+    filter: blur(3px);
+    z-index: -1;
+    opacity: calc(55%);
+    
+}
+
+.login {
+        background-color: rgb(20, 20, 20);
+        height: 480px;
+        width: 700px;
+        margin: auto; 
+        z-index: 1; 
+        border-radius: 3%;
+        position: relative; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.logoZ{
+    margin: 0 auto;
+}
+
+.login .image {
+        width: 55%; 
+        height: 100%; 
+        background-image: url('./login.png');
+        background-size: cover; 
+        border-radius: 3%;
+        background-repeat: no-repeat;
+        object-fit: cover;
+}
+
+
+
+.login form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login input
+ {
+    margin: 0.2rem 1.5rem 1rem 1.5rem;
+    position: relative;
+    padding: 8px;
+    border-radius: 20px;
+    border:1px solid white;
+    background-color: rgb(20, 20, 20);
+    color: #fff;    
+    width: 270px;
+    height: 30px;
+    outline: none;
+    
+}
+
+.login input:focus {
+    border: 2px solid #ff970e;
+}
+
+.login button{
+    background-color: #ff970e; 
+    margin: 0 1.5rem 1rem 1.5rem;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    width: 270px;
+    height: 40px;
+    border: #ff970e;   
+}
+
+#correo{
+
+width: 295px;
+
+}
+.login button:hover {
+    background-color: #d27a06;
+}
+
+#viewpassword{
+
+    color: white;
+}
+
+.registrar{
+    margin: 1rem 1.5rem 1rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+     
+#registrate{
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+} 
+
+#registro{
+background-color: rgb(20, 20, 20);
+color: #ff970e;
+border: none;
+width: 100px;
+height: 15px;
+font-size: 15px;
+}
+
+
+#registro:hover{
+
+    color: #d17905;
+
+}
+
+
+
+/* Para pantallas de hasta 600px (celulares) */
+@media only screen and (max-width: 600px) {
+    .login{
+        width: 90%;
+    }
+
+    .background::before {
+        opacity: 1; /* Mostrar completamente la imagen de fondo en dispositivos móviles */
+    }
+    .login .image {
+        display: none; /* Ocultar la imagen de fondo en dispositivos móviles */
+    }
+}
+
+/* Para pantallas más grandes que 600px */
+@media only screen and (min-width: 601px) {
+    .background::before {
+        opacity: 0.55; /* Restaurar la opacidad en pantallas más grandes */
+    }
+}

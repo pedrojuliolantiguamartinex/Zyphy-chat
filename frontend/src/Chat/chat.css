@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.conteiner-chat {
+  display: flex;
+  width: 45vw;
+}
+
+.app {
+  text-align: center;
+  min-width: 350px;
+}
+
+@media (min-width: 659px) {
+  .app {
+    text-align: center;
+    flex-grow: 1; /* Este elemento tomará todo el espacio restante */
+    min-width: 500px;
+  }
+}
+
+/* Splash Screen Styles */
+.splash-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: rgb(0, 0, 0);
+}
+
+.splash-logo-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.splash-logo {
+  width: 200px;
+  height: 200px;
+  animation: zoomInOut 5s ease-in-out forwards;
+}
+
+.splash-text {
+  font-family: "Nunito", sans-serif;
+  color: orange;
+  font-size: 70px;
+  font-weight: 700;
+  margin-left: 4rem;
+  position: absolute;
+  opacity: 0;
+  animation: slideIn 4.5s ease-in-out forwards;
+}
+
+.splash-text::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: orange;
+  opacity: 0;
+  animation: drawLine 3s ease-in-out forwards;
+  animation-delay: 2.5s; /* Sync with the end of slideIn animation */
+}
+
+@keyframes drawLine {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    width: 120px;
+    opacity: 1;
+  }
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: translateX(-90px);
+  }
+  100% {
+    transform: translateX(-80px);
+  }
+}
+
+@keyframes slideIn {
+  0%, 75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Welcome Screen Styles */
+.welcome-screen {
+  background: url('./chaf.png') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Opacidad ajustada a 0.5 */
+
+}
+
+.welcome-screen .logo {
+  margin-right: 20px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1.5s ease-out;
+}
+
+.welcome-screen h1 {
+  font-family: "Nunito", sans-serif;
+  margin: 20px 0;
+  color: rgb(255, 255, 255);
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.welcome-screen p {
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: 400;
+  animation: fadeInUp 1.5s ease-out;
+  width: 100%; /* Ajusta el ancho del párrafo */
+  max-width: 300px; /* Máximo ancho del párrafo */
+  margin: 0 auto; /* Centra el párrafo */
+}
+
+.welcome-screen .next-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Nunito", sans-serif;
+  border: none;
+  background-color: white;
+  color: orange;
+  font-weight: 800;
+  margin-top: 1rem;
+  border-radius: 100px;
+  margin-left: 0.3rem;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1rem;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.welcome-screen button .uil {
+  transition: transform 0.3s ease; /* Agregar una transición suave */
+}
+
+.welcome-screen button:hover .uil {
+  transform: translateX(5px); /* Mover el icono 5px hacia la derecha al pasar el mouse */
+}
+
+.welcome-screen button:hover{
+  box-shadow: 0 0 0 5px orange;
+}
+
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Rules Screen Styles */
+.rules-screen {
+  background: url('./chaf.png') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  background-color: #000000;
+  position: relative; /* Necesario para el pseudo-elemento */
+}
+
+
+.rules-screen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+  z-index: 1; /* Asegura que el pseudo-elemento esté encima de la imagen de fondo */
+}
+
+.rules-screen * {
+  position: relative; /* Asegura que el contenido esté por encima de la superposición */
+  z-index: 2;
+}
+
+
+.rules-screen h1{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin: 20px 0;
+  color: rgb(255, 255, 255);
+  font-size: 23px;
+  margin-bottom: 0.6rem;
+}
+
+.rules-image {
+  margin-right: 2rem;
+  width: 100px; /* Adjust the size as needed */
+  height: auto;
+  margin-bottom: 20px; /* Adjust the spacing as needed */
+  object-fit: cover;
+}
+
+.rules-screen ul {
+  margin-left: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.rules-screen li {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  margin: 10px 0;
+  margin-bottom: 10px;
+  text-align: left; /* Añadido para alinear a la izquierda */
+}
+
+.icon {
+  font-size: 10px;
+  color: rgb(255, 255, 255);
+  vertical-align: middle;
+}
+
+.rules-screen .next-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Nunito", sans-serif;
+  border: none;
+  background-color: white;
+  color: orange;
+  font-weight: 800;
+  margin-top: 1rem;
+  border-radius: 100px;
+  margin-left: 0.3rem;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+.rules-screen button .uil {
+  transition: transform 0.3s ease; /* Agregar una transición suave */
+}
+
+.rules-screen button:hover .uil {
+  transform: translateX(5px); /* Mover el icono 5px hacia la derecha al pasar el mouse */
+}
+
+
+/* Final Screen Styles */
+.final-screen {
+  margin-top: -3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: flex-start; /* Alinea a la izquierda */
+  margin-left: 1rem;
+  height: 85vh;
+  background-color: #fff;
+}
+
+
+.final-screen h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: orange;
+  font-size: 23px;
+  margin-bottom: 0.6rem;
+  margin-left: 20px;
+  border-bottom: 3px solid orange; /* Añade una línea debajo */
+  padding-bottom: 0.5rem; /* Añade espacio entre el texto y la línea */
+}
+
+.final-screen p {
+  font-family: "Montserrat", sans-serif;
+  color: rgb(238, 162, 22);
+  font-size: 14px;
+  font-weight: 600;
+  margin: 1.5rem 9rem -14px 20px; /* Centra el párrafo */
+}
+
+
+.input-chat {
+  padding: 10px;
+  margin: 20px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 2px solid rgb(248, 201, 113);
+  outline: none; /* Quita el borde por defecto al hacer clic */
+  transition: border-color 0.3s ease; /* Transición suave al cambiar el color del borde */
+  width: 80%; /* Establece el ancho del input al 100% del contenedor padre */
+  max-width: 500px; /* Ajusta el valor según el ancho máximo deseado */
+
+}
+
+
+.input-chat:focus {
+  border-color: orange; /* Color del borde al hacer clic (naranja claro) */
+}
+
+.final-screen button {
+  font-family: "Nunito", sans-serif;
+  border: none;
+  background-color: orange;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+  .welcome-screen h1{
+    font-size: 35px;
+    width: 90%;
+  }
+
+  .input-chat {
+    width: 90%;
+    max-width: 100%; /* Asegura que el input no se desborde */
+  }
+}
+
+@media (min-width: 769px) {
+  /* Estilos para pantallas de PC */
+  .final-screen {
+    
+  }
+
+  .input-chat {
+    width: 100%;
+    max-width: 500px;
+  }
+}

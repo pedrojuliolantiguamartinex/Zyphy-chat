@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --border-radius: 2rem;
+  --card-border-radius: 1rem;
+  --btn-padding: 0.6rem 2rem;
+  --search-padding: 0.6rem 1rem;
+  --card-padding: 1rem;
+  --color-light:hsl(252, 30%, 90%);
+  --color-dark: hsl(0, 0%, 0%);
+  --color-primary: hsl(39, 90%, 51%);
+  --sticky-top-left: 5.4rem;
+  --sticky-top-right: -18rem;
+  }
+  
+  
+  *,*::before,*::after{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      list-style: none;
+      border: 0;
+  }
+  body {
+    font-family: "Montserrat", sans-serif;
+    color: var(--color-light);
+    background: var(--color-dark);
+    overflow-x: hidden;
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+main{
+    position: relative;
+    top: 2.4rem;
+}
+
+.post-and-feed{
+  margin-left: 4rem;
+}
+
+  
+  .profile-pic {
+      width: 2.7rem; /* Tamaño del contenedor */
+      height: 2.7rem; /* Tamaño del contenedor */
+      border-radius: 50%; /* Hacer el contenedor redondo */
+      overflow: hidden; /* Ocultar cualquier parte de la imagen que se desborde */
+      cursor: pointer;
+  }
+  
+  .profile-pic img {
+      display: block;
+      width: 100%; /* Hacer que la imagen ocupe todo el contenedor */
+      height: 100%; /* Hacer que la imagen ocupe todo el contenedor */
+      object-fit: cover; /* Ajustar la imagen para que cubra el contenedor sin distorsión */
+  }
+  
+  
+  .btn{
+      display: inline-block;
+      padding: var(--btn-padding);
+      font-weight: 500;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      transition: all 300ms ease;
+  }
+  
+  .btn:hover{
+      opacity: 0.8;
+  }
+  
+  .btn-primary{
+      background: var(--color-primary);
+      color: white;
+  }
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Divide el espacio en tres columnas */
+    gap: 2rem;
+    position: relative;
+  }
+
+
+  /* Ajusta el ancho de cada componente */
+  Nav {
+    grid-column: 1 / 2; /* El componente Nav ocupa la primera columna */
+  }
+  
+  Post {
+    grid-column: 3 / 3; /* El componente Post ocupa la segunda columna */
+  }
+  
+  Menu {
+    grid-column: 2 / 3; /* El componente Menu ocupa la tercera columna */
+  }
+
+
+  @media screen and (max-width: 660px) {
+
+    /* Ajustar el posicionamiento de Post y Nav */
+    Nav {
+      grid-column: 1 / -1; /* Nav ocupa todas las columnas */
+    }
+
+  
+    Post {
+      grid-column: 2 / -1; /* Post ocupa desde la segunda columna hasta el final */
+    }
+
+    main {
+        margin-left: -2rem;
+  padding: 0 1rem; /* Añadir relleno a los lados */
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  position: relative;
+  }
+}
+
+

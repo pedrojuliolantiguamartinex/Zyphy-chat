@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+nav{
+    width: 100%;
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: rgb(12, 12, 12);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+
+}
+
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .create{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.Nav_imagen{
+  width: 145px;
+  height: 52px;
+}
+
+.logo{
+    color: var(--color-primary);
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.profil{
+    cursor: pointer;
+  color: var(--color-primary);
+  width: 20px;
+  height: 20px;
+}
+
+
+
+.modall {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.modall.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modall-content {
+  background-color: #fff;
+  width: 297px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+
+}
+
+.modall-content{animation:scale-up-center 0.2s; } @keyframes scale-up-center{ 0%{transform:scale(.5)} 100%{transform:scale(1)} }
+
+.h4{
+  font-family: "Nunito", sans-serif;
+  font-size: 22px;
+  margin-top: 2rem;
+  text-align: center;
+  color: black;
+}
+.modall-content p {
+  margin-bottom: 10px;
+  font-size: 12px;
+  margin-top: 0.5rem;
+  text-align: center;
+  color: rgb(109, 109, 109);
+}
+
+.log {
+  height: 120px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.modall-content button {
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 48%;
+  margin-bottom: 0.3rem;
+  margin-right: 0.3rem;
+  margin-top: 1rem;
+}
+
+.aceptar{
+  background-color: var(--color-primary);
+  color: #fff;
+  font-weight: 400;
+  
+}
+
+.negar{
+  background-color: rgb(255, 255, 255);
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+button.aceptar:hover{
+  background-color: orange;
+  color: #fff;
+  font-weight: 400;
+}
+
+button.negar:hover{
+  background-color: rgb(243, 243, 243);
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+
+.modall-content button:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .modall-content {
+    width: 70%;
+  }
+}
+

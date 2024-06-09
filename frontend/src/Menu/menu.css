@@ -1,0 +1,129 @@
+
+    
+    main .container .left{
+        display: flex;
+        height: max-content;
+        position: sticky;
+        top: var(--sticky-top-left);
+        
+    }
+    
+    
+    .left .sidebar{
+        width: 200px;
+        margin-right: -10px;
+        margin-top: 1rem;
+        background: var(--color-white);
+        border-radius: var(--card-border-radius);
+    }
+    
+    .left .sidebar .menu-item{
+        background-color: rgb(12, 12, 12);
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 4rem;
+        cursor: pointer;
+        transition: all 300ms ease;
+    }
+    
+    .left .sidebar .menu-item:hover{
+        background: var(--color-light);
+    }
+    
+    .left .sidebar .i{
+        font-size: 1.4rem;
+        color: var(--color-primary);
+        margin-left: 1rem;
+        position: relative;
+    }
+    
+    .left .sidebar h3{
+        color: var(--color-primary);
+        margin-left: 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .left .sidebar .active{
+        background: var(--color-light);
+        
+    }
+    
+    .left.sidebar .active .i,
+    .left .sidebar .active h3{
+        color: var(--color-primary);
+    }
+    
+    .left .sidebar .active::before{
+    
+        content: "";
+        display: block;
+        width: 0.5rem;
+        height: 100%;
+        position: absolute;
+        background: var(--color-primary);
+    }
+    
+    .left .sidebar .menu-item:first-child.active{
+        border-top-left-radius: var(--card-border-radius);
+        overflow: hidden;
+    }
+    .left .sidebar .menu-item:last-child.active{
+        border-bottom-left-radius: var(--card-border-radius);
+        overflow: hidden;
+
+    }
+    
+    .modal-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        display: flex;
+        justify-content: flex-start; /* Align to the left */
+      }
+      
+      .modal {
+        width: 300px;
+        max-width: 80%;
+        background-color: rgb(12, 12, 12);
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        box-shadow: 0 2px 9px rgba(117, 117, 117, 0.1);
+      }
+      
+      .modal.show {
+        transform: translateX(0);
+      }
+      
+      .post-and-feed {
+        flex-grow: 1;
+        padding: 20px;
+      }
+
+    
+    @media screen and (max-width: 768px){
+        main .container .left .sidebar{
+            width: 4rem;
+            margin-top: 5rem;
+        }
+        .left{
+            z-index: 5;
+        }
+        .sidebar h3{
+            display: none;
+        }
+
+        main .container .left{
+            grid-column: 3/4;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+  
+
+    }
